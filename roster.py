@@ -19,9 +19,6 @@ def open_files():
         print("Invalid number of command line arguments")
         exit(1)
 
-    # create database
-    open("students.db").close()
-
     # assign database to variable
     global db
     db = cs50.SQL("sqlite:///students.db")
