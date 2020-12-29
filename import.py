@@ -6,7 +6,7 @@ import cs50
 def main():
     open_files()
 
-    with open("characters.csv") as test:
+    with open(argv[1]) as test:
         tester = csv.DictReader(test)
         for row in tester:
 
@@ -31,9 +31,6 @@ def open_files():
     if len(argv) != 2:
         print("Invalid number of command line arguments")
         exit(1)
-
-    # create database
-    open("students.db").close()
 
     # assign database to variable
     global db
